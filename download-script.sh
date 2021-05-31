@@ -1,6 +1,6 @@
 #!/bin/sh
 
-printf "This script will install packages you'll need to get started with Arch Linux. Please run this script as root. Continue? (Y/N) "
+printf "This script will install packages you'll need to get started with Arch Linux. Please do not run this script as root. Please enter the password whenever required. Continue? (Y/N) "
 
 read choice
 
@@ -10,7 +10,8 @@ if [ $choice == 'Y' ] || [ $choice == 'y' ]
     #sudo pacman -S git 
     git clone https://aur.archlinux.org/paru.git
     cd paru/
-    makepkg -si 
+    makepkg -si
+    paru -S bat 
     printf "Paru is installed. Get its help by typing paru -h"
   else
     exit 1
@@ -30,8 +31,6 @@ printf "Adding pacman hooks to /etc/pacman.d/hooks"
 mkdir ~/git-files
 cd ~/git-files/
 mkdir /etc/pacman.d/hooks
-#printf "Now cloning from https://github.com/ghostx31/Arch-files.git "
-#git clone https://https://github.com/ghostx31/Arch-files.git
 cd Arch-files/
 cd hooks/
 sudo mv *.hook /etc/pacman.d/hooks
@@ -62,6 +61,11 @@ if [ "$nv" == "y" ] || [ "$nv" == "Y" ]
   else
     printf "Not installing nvidia drivers. "
 fi 
+
+printf "Installing Pulseaudio then presets for it. You will get notification about conflicting programs. Remove the conflicting programs by selecting 'y' "
+paru -S pulseeffects 
+printf "Installing presets "
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
 
 printf "Updating the system. "
 sudo pacman -Syu 
