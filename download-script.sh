@@ -31,7 +31,7 @@ printf "Adding pacman hooks to /etc/pacman.d/hooks"
 mkdir ~/git-files
 cd ~/git-files/
 mkdir /etc/pacman.d/hooks
-cd Arch-files/
+#cd Arch-files/
 cd hooks/
 sudo mv *.hook /etc/pacman.d/hooks
 sudo pacman -S pacman-contrib
