@@ -62,12 +62,10 @@ if [ "$nv" == "y" ] || [ "$nv" == "Y" ]
     printf "Not installing nvidia drivers. "
 fi 
 
-printf "Installing Pulseaudio then presets for it. You will get notification about conflicting programs. Remove the conflicting programs by selecting 'y' "
-paru -S pulseeffects 
-printf "Installing presets "
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+printf "Installing Pulseaudio. You might  get notification about conflicting programs. Remove the conflicting programs by selecting 'y' "
+paru -S pulseeffects
 
-printf "Updating the system. "
+printf "Updating system "
 sudo pacman -Syu 
 
 printf "Thank you for using this script. For further instructions, feel free to contact me. "
