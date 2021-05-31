@@ -34,6 +34,7 @@ mkdir /etc/pacman.d/hooks
 cd Arch-files/
 cd hooks/
 sudo mv *.hook /etc/pacman.d/hooks
+sudo pacman -S pacman-contrib
 printf "Moved hooks to /etc/pacman.d/hooks "
 
 printf "Do you want to install linux-zen kernel? "
