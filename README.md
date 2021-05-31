@@ -12,6 +12,5 @@ This script was made by me for my friends who are new to Arch Linux. This instal
   5. linux-zen kernel 
   6. auto-cpufreq tlp and tlpui 
   7. nvidia-dkms drivers
-  8. pulseeffects equaliser and presets for it.
-
+  8. Pulseeffects equaliser.
 After all these installations, the script updates the system.
