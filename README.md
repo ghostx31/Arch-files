@@ -14,4 +14,6 @@ This script was made by me for my friends who are new to Arch Linux. This instal
   7. nvidia-dkms drivers
   8. Pulseeffects equaliser.
   9. Pacman-contrib
+  10. neofetch - To show off that cute Arch logo lol 
 After all these installations, the script updates the system.
+
