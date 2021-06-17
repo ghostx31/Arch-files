@@ -17,3 +17,4 @@ This script was made by me for my friends who are new to Arch Linux. This instal
   10. neofetch - To show off that cute Arch logo lol 
 After all these installations, the script updates the system.
 
+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
